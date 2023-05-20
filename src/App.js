@@ -5,10 +5,8 @@ import {
   BrowserRouter,
   Routes,
   Route,
- 
 } from "react-router-dom";
 import Header from './components/Header/Header';
-// import Navbar from './components/Navbar/Navbar';
 import Navigation from './components/Navigation/Navigation';
 import Home from './components/Home/Home';
 import Contact from './components/Contact/Contact';
@@ -20,7 +18,6 @@ function App() {
       <BrowserRouter>
         
         <Header></Header>
-        {/* <Navbar></Navbar> */}
         <Navigation></Navigation>
 
         <Routes>
@@ -31,11 +28,6 @@ function App() {
         
       </BrowserRouter>
 
-      {/* <Header></Header>
-      <Navbar></Navbar>
-      <Home></Home>
-      <Contact></Contact>
-      <Login></Login> */}
     </div>
   );
 }
