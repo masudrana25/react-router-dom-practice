@@ -1,11 +1,10 @@
 import './App.css';
 import React from "react";
 import {
-  createBrowserRouter,
-  RouterProvider,
+  BrowserRouter,
+  Routes,
   Route,
-  Link,
-  createRoutesFromElements,
+ 
 } from "react-router-dom";
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
@@ -16,16 +15,24 @@ import Login from './components/Login/Login';
 function App() {
   return (
     <div>
-      createBrowserRouter{
-        createRoutesFromElements(
-          <Route path='/' element={Home} />
-        )
-      }
-      <Header></Header>
+      <BrowserRouter>
+        
+        <Header></Header>
+        <Navbar></Navbar>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+        
+      </BrowserRouter>
+
+      {/* <Header></Header>
       <Navbar></Navbar>
       <Home></Home>
       <Contact></Contact>
-      <Login></Login>
+      <Login></Login> */}
     </div>
   );
 }
